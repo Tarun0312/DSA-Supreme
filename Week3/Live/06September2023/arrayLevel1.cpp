@@ -43,10 +43,16 @@ int findMinimumInArray(int arr[],int size){
 //INT_MIN== -2^31
 
 int minAns = INT_MAX; // best practice max=INT_MIN
+// for(int i=0;i<size;i++){
+//     if(arr[i]<minAns){
+//         minAns=arr[i]; //minAns=min(arr[i],minAns)
+//     }
+// }
+
+
+// using predefined max function
 for(int i=0;i<size;i++){
-    if(arr[i]<minAns){
-        minAns=arr[i]; //minAns=min(arr[i],minAns)
-    }
+    minAns=min(minAns,arr[i]);
 }
 return minAns;
 }
@@ -169,10 +175,10 @@ int main(){
     // printCountZeroAndCountOne(arr,n);
 
     /*Minimum number in an array */
-    // int arr[10]={10,21,2,1,34,1,2,90,1,-1};
-    // int size=10;
-    // int minimum=findMinimumInArray(arr,size);
-    // cout<<minimum;
+    int arr[10]={10,21,2,1,34,1,2,90,1,-1};
+    int size=10;
+    int minimum=findMinimumInArray(arr,size);
+    cout<<minimum;
 
     /* Reverse an array */
     // int a[10]={10,21,21,121,324,12,901,11,111,10};
@@ -181,9 +187,11 @@ int main(){
     
 
     /* Extreme Print In Array */
-    int arr[9]={1,2,3,4,5,6,7,8,9};
-    int size=9;
-    extremePrintInArray(arr,size);
+    // int arr[9]={1,2,3,4,5,6,7,8,9};
+    // int size=9;
+    // extremePrintInArray(arr,size);
+
+
     return 0;
 
 }
