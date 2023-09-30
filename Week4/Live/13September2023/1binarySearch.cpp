@@ -56,7 +56,7 @@ int main(){
     // INT_MAX -> 2147483647
     // INT_MAX/2 -> 1073741823
     // 2147483647 + 2147483647 => 429496724/2 =2147483647
-    //but numerator integer ki range se overflow ho chuka hai toh answer wromg aayega
+    //but numerator integer ki range se overflow ho chuka hai toh answer wrong aayega
     int mid = INT_MAX/2 + INT_MAX/2;//best practice no numerator overflow  //2147483646
     int mid1 = INT_MAX + (INT_MAX-INT_MAX)/2; //2147483647 //more better practice
     cout<<mid<<" "<<mid1;

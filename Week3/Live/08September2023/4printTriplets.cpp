@@ -28,6 +28,7 @@ void printTriplets(int arr[],int size){
   
 }
 
+
 int main(){
 
     int arr[] = {10,20,10};
