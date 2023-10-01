@@ -28,6 +28,22 @@ int binarySearchDivisionOfTwoNumbers(int dividend,int divisor){
     return quotient;
 }
 
+double divisionKPrecison(int dividend,int divisor,int k){
+    double quotient = binarySearchDivisionOfTwoNumbers(dividend,divisor);
+
+    double step=0.1;
+
+    {
+        double j = quotient;
+        while(j*divisor <= dividend){
+            quotient = j;
+            j+=step;
+        }
+    }
+    
+
+    return quotient;
+}
 int main(){
 
     int dividend=-1,divisor=1; 
