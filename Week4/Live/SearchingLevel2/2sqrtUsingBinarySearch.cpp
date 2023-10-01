@@ -33,41 +33,60 @@
 #include<iomanip>
 using namespace std;
 
-double sqrtGivesFloatValueTill3DecimalPlaces(int x){
-    cout<<fixed;
-    setprecision(3);
-    double s=0,e=x; 
-    double step=0.001;
-    double ans = 0;
+int mySqrt(int x){
+
+    int s=0,e=x; 
+    int ans = 0;
     while(s<=e){
-        double mid = s + (e-s)/2; 
-        double square = mid * mid;
-        cout<<s<<" "<<mid<<" "<<e<<" "<<square;
-        cout<<"\n";
+        long long int mid = s + (e-s)/2; 
+        long long int square = mid * mid;
+
         if(square == x){
             // cout<<"aa\n";
             return mid;
         }else if(square > x){
             //left
-            e= mid - step;
-        }else if(square<x){
+            e= mid - 1;
+        }else{
+            //square<x
+
             //ans store
             ans = mid;
             //right
-            s = mid + step;
+            s = mid + 1;
         }
-        cout<<"After"<<s<<" "<<mid<<" "<<e<<" "<<square;
-        cout<<"\n";
+       
     }
-    cout<<"\n"<<s<<" "<<e<<"\n";
+
     return ans;
 }
 
+double precisionSqrt(int n){
+    double sqrt = mySqrt(n);
+
+    double step=0.1;
+    int precision=3;
+
+    for(int i=0;i<precision;i++){
+         //sqrt with precision 1
+        {
+            double j = sqrt;
+            while(j*j <=n){
+                sqrt=j; 
+                j+=step;
+            }
+        }
+        step/=10;
+    }
+   
+    
+
+    return sqrt;
+}
 int main(){
 
-    int num = 64;
-    
-    cout<<"Square root of "<<num<<setprecision(3)<<" is "<<sqrtGivesFloatValueTill3DecimalPlaces(num)<<endl;
+    int num = 5;
+    cout<<"Square root of "<<num<<" is "<<precisionSqrt(num)<<endl;
 
     return 0;
 }
