@@ -40,26 +40,27 @@ int main(){
 
 
     // q10 numeric full pyramid
-    // for(int row=0;row<n;row++){
-    //     //space
-    //     for(int col=0;col<n-row-1;col++){
-    //         cout<<"  ";
-    //     }
-    //     //number
-    //     int x=row+1;
-    //     for(int col=0;col<row+1;col++){
-    //         cout<<x++<<" ";
-    //     }
-    //     x--;
-    //     if(row>0){
-    //         //right half pyramid
-    //         for(int num=x;num>row+1;){
-    //             num--;
-    //             cout<<num<<" ";
-    //         }
-    //     }     
-    //     cout<<endl;
-    // }
+    for(int row=0;row<n;row++){
+        //space
+        for(int col=0;col<n-row-1;col++){
+            cout<<"  ";
+        } 
+        //number
+        int x=row+1;
+        for(int col=0;col<row+1;col++){
+            cout<<x++<<" ";
+        }
+        x--;
+        int num = x;
+        if(row>0){
+            //right half pyramid
+            for(int j=0;j<row;j++){
+                num--;
+                cout<<num<<" ";
+            }
+        }     
+        cout<<endl;
+    }
 
 
     // q11 numeric  hollow full pyramid
