@@ -1,0 +1,3 @@
+ if(index>=n) {
+        return ;
+    }
