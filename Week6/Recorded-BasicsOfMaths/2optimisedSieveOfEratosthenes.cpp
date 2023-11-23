@@ -68,19 +68,19 @@ vector<bool> segSieve(int L,int R){
 
 int main(){
     
-    // vector<bool>sieve = Sieve(105);
+    vector<bool>sieve = Sieve(5);
 
-    // for(int i=0;i<=105;i++){
-    //     if(sieve[i])
-    //         cout<<i<<" ";
-    // }
-
-    int L = 1,R=10;
-    vector<bool>ss = segSieve(L,R);
-
-    for(int i=0;i<ss.size();i++){
-        if(ss[i])
-            cout<<i+L<<" ";
+    for(int i=0;i<=5;i++){
+        if(sieve[i])
+            cout<<i<<" ";
     }
+
+    // int L = 1,R=10;
+    // vector<bool>ss = segSieve(L,R);
+
+    // for(int i=0;i<ss.size();i++){
+    //     if(ss[i])
+    //         cout<<i+L<<" ";
+    // }
     return 0;
 }
