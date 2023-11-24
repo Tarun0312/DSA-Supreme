@@ -13,31 +13,31 @@ void printArray(vector<int>& arr){
 
 void selectionSort(vector<int>& arr){
 
-    // int n = arr.size();
-    
-    // for(int i=0;i<n-1;i++){
-    //     int minIndex = i;
-    //     for(int j=i+1;j<n;j++){
-    //         if(arr[j] < arr[minIndex]){
-    //             minIndex=j;
-    //         }
-    //     }
-    //     swap(arr[i],arr[minIndex]);
-    // }
-
-    //sorting in descending order
-
     int n = arr.size();
     
     for(int i=0;i<n-1;i++){
-        int maxIndex = i;
+        int minIndex = i;
         for(int j=i+1;j<n;j++){
-            if(arr[j] > arr[maxIndex]){
-                maxIndex=j;
+            if(arr[j] < arr[minIndex]){
+                minIndex=j;
             }
         }
-        swap(arr[i],arr[maxIndex]);
+        swap(arr[i],arr[minIndex]);
     }
+
+    //sorting in descending order
+
+    // int n = arr.size();
+    
+    // for(int i=0;i<n-1;i++){
+    //     int maxIndex = i;
+    //     for(int j=i+1;j<n;j++){
+    //         if(arr[j] > arr[maxIndex]){
+    //             maxIndex=j;
+    //         }
+    //     }
+    //     swap(arr[i],arr[maxIndex]);
+    // }
 
 }
 
