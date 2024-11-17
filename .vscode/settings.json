@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "*.html": "html",
+        "iostream": "cpp",
+        "vector": "cpp",
+        "iomanip": "cpp",
+        "string": "cpp",
+        "map": "cpp",
+        "queue": "cpp"
+    }
+}
