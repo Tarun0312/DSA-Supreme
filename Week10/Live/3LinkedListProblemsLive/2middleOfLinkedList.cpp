@@ -5,7 +5,7 @@
 
 //     //approach 1 : brute force using two passes of linked list
 //     //step1 : find length of ll
-//     //step2 : odd length then pos = size/2+1
+//     //step2 : odd length then pos = size/2 +1
 //             //even length then pos = size/2+1
 
 //     int getLengthOfLL(ListNode* head){

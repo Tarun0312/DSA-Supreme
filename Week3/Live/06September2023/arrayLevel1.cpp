@@ -70,11 +70,12 @@ void reverseArray(int arr[],int size){
     // }
 
     int left=0,right=size-1;
-    while(left<=right){  //(!(left>right))
+    while(left<right){  //(!(left>right))
         swap(arr[left],arr[right]);
         left++;
         right--;
     }
+   
     for(int i=0;i<size;i++){
         cout<<arr[i]<<" ";
     }

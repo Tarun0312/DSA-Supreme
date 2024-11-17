@@ -2,78 +2,57 @@
 
 // class Solution {
 // public:
-//     //algo -> step1: break list into two halves using middle node
-//     //step2 : reverse the right list
-//     //step3 : compare left and reverse right list
-
-//     void printList(ListNode* head){
-//         ListNode* temp = head;
-//         while(temp!=NULL){
-//             cout<<temp->val<<" ";
-//             temp = temp->next;
-//         }
-//         cout<<endl;
-//     }
-//     ListNode* middleNode(ListNode* head){
-
-//         //using slow and fast but middle node is 3rd node na ki 4th node in case of 6 node list
-
-//         ListNode* fast = head;
-//         ListNode* slow = head;
-
-//         while(fast->next != NULL){
-//             fast = fast->next;
-//             if(fast->next != NULL){
-//                 fast = fast->next;
-//                 slow = slow->next;
-//             }
-//         }
-
-//         return slow;
-//     }
-
-//     ListNode* reverseList(ListNode* head){
+//     ListNode* reverseListIterative(ListNode* head){
 //         ListNode* prev = NULL;
 //         ListNode* curr = head;
 
-//         while(curr!=NULL){
+//         if(head==NULL){
+//             //empty list
+//             return head;
+//         }
+
+//         while(curr != NULL){
 //             ListNode* nextNode = curr->next;
 //             curr->next = prev;
 //             prev = curr;
 //             curr = nextNode;
 //         }
 //         head = prev;
+
 //         return head;
-//     }
-
-//     bool compareList(ListNode* leftHeadList,ListNode* rightHeadList){
-
-//         while(leftHeadList!=NULL && rightHeadList!=NULL){
-//             if(leftHeadList->val != rightHeadList->val){
-//                 return false;
-//             }else{
-//                 leftHeadList = leftHeadList->next;
-//                 rightHeadList = rightHeadList->next;
-//             }
-//         }
-//         return true;
-//     }
-    
-
-//     bool isPalindrome(ListNode* head) {
-
-//     //    break list into two halves using middle node
-//         ListNode* midNode = middleNode(head); 
-//         ListNode* headRightList = midNode->next;
-
-//     //  reverse the right list
-//         headRightList = reverseList(headRightList);
-
-//     //compare left list and reverse right list
-//         bool ans = compareList(head,headRightList);
-//         return ans;
 
 //         //tc -> O(n)
-//         //sc -> O(1)
+//         //sc->O(1)
+//     }
+
+//     ListNode* reverseListRecursiveApproach(ListNode* prev,ListNode* curr){
+//         //1 node ko hum reverse krenge baaki recursion smbhal lega
+
+//         //base case
+//         if(curr==NULL){
+//             //prev points to head of linked list
+//             return prev;
+//         }
+
+//         //1 case hum solve krenge
+//         ListNode* nextNode = curr->next;
+//         curr->next = prev; //link break ho gya hai next node se so pehle link preserve kr lo
+//         prev = curr;
+//         curr = nextNode;
+
+//         //recursion
+//         ListNode* recursionAns = reverseListRecursiveApproach(prev,curr);
+//         return recursionAns;
+
+//         //tc -> O(n)
+//         //sc -> O(n)
+
+//     }
+//     ListNode* reverseList(ListNode* head) {
+//         // return reverseListIterative(head);
+
+//         ListNode* prev = NULL;
+//         ListNode* curr = head;
+//         return reverseListRecursiveApproach(prev,curr);
 //     }
 // };

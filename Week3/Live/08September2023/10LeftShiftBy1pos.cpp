@@ -1,7 +1,8 @@
 #include<iostream>
 
 using namespace std;
-
+                                //    i/p  10 20 30 40 50 p=2  
+                                //    o/p  30 40 50 10 20     
 
 // i/p -> 10 20 30 40 50
 // o/p    20 30 40 50 10
@@ -21,8 +22,8 @@ void leftShiftBy1Position(int arr[],int size){
 
 }
 
-// i/p -> 10 20 30 40 50 position(4)
-// o/p    50 10 20 30 40
+// i/p -> 10 20 30 40 50 position(4)     
+// o/p    50 10 20 30 40                  
 void leftShiftArrayByKthPosition(int arr[],int size,int shiftLength){
     // Algo
     // Step 1 copy array elements in temp array till position-1 elements
@@ -38,9 +39,13 @@ void leftShiftArrayByKthPosition(int arr[],int size,int shiftLength){
     }
 
     int j=0;
-    for(int i=shiftLength-1;i<size-1;i++){
-        arr[j++]=arr[i+1];
+    for(int i=shiftLength;i<size;i++){ 
+        // arr[j++]=arr[i];  
+        arr[j++] = arr[i];              
     }
+    // for(int i=shiftLength-1;i<size-1;i++){ 
+    //     arr[j++]=arr[i+1];                
+    // }
 
     for(int i=0;i<shiftLength;i++){
         arr[j]=temp[i];
@@ -60,7 +65,7 @@ void printArray(int arr[],int size){
 
 int main(){
 
-    int arr[] = {11,34,11,34,12,89,12};
+    int arr[] = {11,34,11,34,12,89,12};    
     // 12 89 12 11 34 11 34
     // 34 11 34 12 89 12 11
     // 11 34 12 89 12 11 34

@@ -1,4 +1,4 @@
-// 2d array initialization mei at least col  size dena pdega bcoz of col*i+j (this formula will convert 2d array in into 1d which is stored contigusoly inmemory )
+// 2d array initialization mei at least col  size dena pdega bcoz of col*i+j (this formula will convert 2d array in into 1d which is stored contiguosly in memory )
 // func mei jb 2d array pass krenge toh at least col  size dena pdega bcoz of col*i+j 
 
 #include<iostream>
@@ -107,7 +107,7 @@ void printSumColumnwWise(int arr[][4],int row,int col){
 
 
 //diagonal sum print
-int diagonalSum(int arr[][4],int size){
+int diagonalSum(int arr[][4],int size){    
     int sum=0;
     for(int i=0;i<size;i++){
         sum+=arr[i][i];
@@ -137,20 +137,20 @@ void transposeOfMatrix(int arr[][4],int size){
     // }
 
     //lower triangle proccessed/swapped
-    // for (int i=0;i<size;i++){
-    //     for(int j=0;j<=i;j++){
-    //         if(i!=j)
-    //         swap(arr[i][j],arr[j][i]);
-    //     }
-    // }
+    for (int i=0;i<size;i++){
+        for(int j=0;j<=i;j++){
+            if(i!=j) 
+            swap(arr[i][j],arr[j][i]);
+        }
+    }
 
     //keep track of whether we have to swap or not
-    bool swap1[4][4] = {0};
+    bool swap1[4][4] = {0};    
 
     for(int i=0;i<size;i++){
         for(int j=i;j<size;j++){
             swap1[i][j]=1;
-            if(swap1[i][j]==1){
+            if(swap1[i][j]==1){  //no need for swap array
                 swap(arr[i][j],arr[j][i]);
             }
         }
@@ -170,9 +170,9 @@ int main(){
     //initialisation
 
     int arr1[3][4] = {
-                        {1,2,3,4},
-                        {3,2,1,7},
-                        {8,90,10,2},
+                        {1,2,3,4},     
+                        {3,2,1,7},      
+                        {8,90,10,2},   
                     };
 
     int arr2[][5] = {
@@ -182,10 +182,10 @@ int main(){
                         {2,-3,1,56,9},
                     };
     int row2=4,col2=5;
-    // printArrayRowWise(arr2,row2,col2);
+    // printArrayRowWise(arr1,row2,col2);
 
     int row1=3,col1=4;
-    // printArrayColumnWise(arr1,row1,col1);
+    printArrayColumnWise(arr1,row1,col1);
 
 
     //input 2d array

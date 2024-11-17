@@ -1,4 +1,5 @@
 #include<iostream>
+#include<vector>
 
 using namespace std;
 
@@ -37,7 +38,7 @@ void negativeToTheLeftAndPositiveToTheRight(vector<int>& arr){
     //Dutch National Flag Algorithm || Two pointer
     //order not preserved
     // int left =0,right = arr.size()-1;
-    // while(left<=right){
+    // while(left<=right){       
     //     if(arr[left]<0){
     //         left++;
     //     }else if(arr[right]>0){

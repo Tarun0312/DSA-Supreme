@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/reverse-nodes-in-k-group/description/
 #include<iostream>
 
 using namespace std;
@@ -33,7 +34,7 @@ int getLength(ListNode* head){
             ListNode* prev = NULL;
             ListNode* curr = head;
             int pos=0;
-            ListNode* nextNode=curr->next;
+            ListNode* nextNode;
 
             if(k > getLength(head)){
                 return head;
@@ -41,7 +42,7 @@ int getLength(ListNode* head){
 
             while(pos<k){
                 //1 node reverse hogi iss code se
-                //humei 2node reveerse krni ,we can use loop
+                //humei 2 or more node reverse krni ,we can use loop
                 nextNode = curr->next;
                 curr->next = prev;
                 prev = curr;
@@ -57,5 +58,5 @@ int getLength(ListNode* head){
         }
         
         return prev;
-    }
+}
     

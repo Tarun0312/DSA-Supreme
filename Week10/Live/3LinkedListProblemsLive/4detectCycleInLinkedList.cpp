@@ -10,7 +10,7 @@
 //             if(table[temp] == false){
 //                 table[temp] = true;
 //             }else{
-//                 //loop/cycle present
+//                 //loop cycle present
 //                 return true;
 //             }
 //             temp = temp->next;

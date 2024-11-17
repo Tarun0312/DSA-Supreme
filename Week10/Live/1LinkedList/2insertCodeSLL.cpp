@@ -303,26 +303,26 @@ int main(){
 
         {
             insertAtHead(head,tail,50);
-            // insertAtHead(head,tail,40);
-            // insertAtHead(head,tail,30);
-            // insertAtHead(head,tail,20);
-            // insertAtHead(head,tail,10);
+            insertAtHead(head,tail,40);
+            insertAtHead(head,tail,30);
+            insertAtHead(head,tail,20);
+            insertAtHead(head,tail,10);
 
-        //delete from head
-            // printLL(head);
-            // deleletNode(head,tail,1);
-            // printLL(head);
+        // delete from head
+            printLL(head);
+            deleletNode(head,tail,1);
+            printLL(head);
 
 
-        //delete from tail
-            // printLL(head);
-            // deleletNode(head,tail,5);
-            // printLL(head);
+        // delete from tail
+            printLL(head);
+            deleletNode(head,tail,5);
+            printLL(head);
         
         //delete from middle
-            // printLL(head);
-            // deleletNode(head,tail,4);
-            // printLL(head);
+            printLL(head);
+            deleletNode(head,tail,4);
+            printLL(head);
 
         //delete from head
             printLL(head);

@@ -169,7 +169,7 @@ void deleteNode(Node* &head,Node* &tail,int position){
 
     //Linked list is empty
     if(head==NULL){
-        cout<<"can't insert a node in linked list,enter a valid position"<<endl;
+        cout<<"can't delete a node in linked list,enter a valid position"<<endl;
         return;
     }
 
@@ -177,7 +177,7 @@ void deleteNode(Node* &head,Node* &tail,int position){
     if(head==tail){
 
         Node* temp = head;
-        delete head;
+        delete temp;
         head = NULL;
         tail = NULL;
         return;
@@ -229,7 +229,8 @@ void deleteNode(Node* &head,Node* &tail,int position){
         //step3: isolate currentNode
         currNode->prev = NULL;
         currNode->next = NULL;
-
+        
+ 
         //step4 :delete currNode
         delete currNode;
 

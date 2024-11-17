@@ -5,7 +5,7 @@ using namespace std;
 
 
 // Insert In A Sorted Stack
-//i/p-> 30 20 10 element=15
+//i/p-> 10 20 30 element=15
 //o/p-> 30 20 15 10
 
 
@@ -35,10 +35,9 @@ int main(){
     st.push(10);
     st.push(20);
     st.push(30);
-    st.push(40);
-    st.push(50);
+    
 
-    int element = 25;
+    int element = 15;
     insertInSortedStack(st,element);
 
     while(!st.empty()){

@@ -27,7 +27,7 @@
 
 //     ListNode* reverseList(ListNode* head){
 //         ListNode* prev = NULL;
-//         ListNode* curr = prev;
+//         ListNode* curr = head;
 
 //         while(curr!=NULL){
 //             ListNode* nextNode = curr->next;
@@ -56,7 +56,7 @@
 
 //     bool isPalindrome(ListNode* head) {
 
-//     //    break list into two halves using middle node
+//     //  break list into two halves using middle node
 //         ListNode* midNode = middleNode(head); 
 //         ListNode* headRightList = midNode->next;
 //         midNode->next = NULL;

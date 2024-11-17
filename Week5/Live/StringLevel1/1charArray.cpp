@@ -29,7 +29,7 @@ int lengthOfString(char ch[],int size){
 void reverseString(char ch[],int length){
     //two pointer
     int left = 0,right=length-1;
-    while(left<=right){
+    while(left<right){
         swap(ch[left],ch[right]);
         left++;
         right--;
@@ -116,9 +116,9 @@ int main(){
     cout<<"Length of string is "<<lengthOfString(ch,20)<<endl;
     cout<<"Printing length: "<<strlen(ch)<<endl;
 
-    // cout<<"Before "<<ch<<"\n";
-    // reverseString(ch,strlen(ch));
-    // cout<<"After "<<ch<<endl;
+    cout<<"Before "<<ch<<"\n";
+    reverseString(ch,strlen(ch));
+    cout<<"After "<<ch<<endl;
 
     // //predefined function for reverse
     // reverse(ch,ch+strlen(ch));

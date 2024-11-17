@@ -115,7 +115,6 @@ void levelOrderTraversal(Node* root){
         Node* frontNode = q.front();
         q.pop();
 
-        
         if(frontNode==NULL){
             //null
             cout<<endl;

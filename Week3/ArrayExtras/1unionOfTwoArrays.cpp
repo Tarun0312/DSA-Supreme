@@ -1,4 +1,5 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 
 vector<int> unionTwoArrays(vector<int>& a,vector<int>& b){
@@ -17,8 +18,8 @@ vector<int> unionTwoArrays(vector<int>& a,vector<int>& b){
 }
 
 // eg -> i//p {1,2,4,8,3}  {2,5,6,3} o/p{1,2,4,8,3,5,6} 
-//union in case of duplicate exists
 
+//union in case of duplicate exists
 vector<int> unionTwoArraysDuplicateCase(vector<int>& a,vector<int>& b){
     int a_size = a.size();
     int b_size = b.size();
@@ -55,7 +56,7 @@ void printVector(vector<int> a){
 
 int main(){
     vector<int> arr1={12,13,13,4,45,15};
-    vector<int> arr2={2,13,15};
+    vector<int> arr2={2,13,1,15};
 
     vector<int> union1 = unionTwoArrays(arr1,arr2);
     printVector(union1);
